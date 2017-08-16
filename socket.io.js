@@ -1,5 +1,5 @@
 /**
- * 使用socket.io
+ * 使用socket.io (用户实时web应用、实时聊天室)
  * 运行：node socket.io.js
  *
  * 客户端js可以使用 http://localhost:3000/socket.io/socket.io.js 获取
