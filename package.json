@@ -1,12 +1,10 @@
 {
-    "name": "akoa",
+    "name": "start",
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "start": "node bin/www",
-        "dev": "./node_modules/.bin/nodemon bin/www",
-        "prd": "pm2 start bin/www",
-        "test": "./node_modules/.bin/mocha -u bdd"
+        "start": "node koa-server.js",
+        "dev": "./node_modules/.bin/nodemon koa-server.js"
     },
     "dependencies": {
         "debug": "^2.6.3",
@@ -31,6 +29,7 @@
         "mongoose": "^4.11.7",
         "redis": "^2.8.0",
         "cheerio": "^0.22.0",
+        "socket.io": "^2.0.3",
         "nunjucks": "~3.0.0 "
     },
     "devDependencies": {
