@@ -4,8 +4,8 @@
  * 访问：http://localhost:3000
  */
 
-var http = require("http");
-var rp = require('request-promise');
+const http = require("http");
+const rp = require('request-promise');
 
 http.createServer(function(req, res){
     res.writeHead(200,{"Content-Type":"text/html"});

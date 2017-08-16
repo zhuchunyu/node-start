@@ -5,7 +5,7 @@
  * 客户端js可以使用 http://localhost:3000/socket.io/socket.io.js 获取
  */
 
-var io = require('socket.io')();
+const io = require('socket.io')();
 
 //监听用户连接
 io.on('connection', function(socket){

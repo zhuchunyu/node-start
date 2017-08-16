@@ -3,11 +3,11 @@
  * 运行: node mongodb.js
  */
 
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://192.168.1.125:27017/start', {useMongoClient:true});
 
-var db = mongoose.connection;
+const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
@@ -16,15 +16,15 @@ db.once('open', function() {
 });
 
 //定义模型
-var helloSchema = mongoose.Schema({
+const helloSchema = mongoose.Schema({
     name: String,
     created:Date
 });
 
-var Hello = mongoose.model('Hello', helloSchema);
+const Hello = mongoose.model('Hello', helloSchema);
 
 //保存数据
-var silence = new Hello({ name: 'jack', created:new Date() });
+const silence = new Hello({ name: 'jack', created:new Date() });
 
 silence.save().then(function () {
     console.log('saved');
