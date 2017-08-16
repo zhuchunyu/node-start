@@ -1,5 +1,5 @@
 /**
- * 使用redis数据库
+ * 使用redis数据库(redis是内存数据库，用于缓存)
  * 运行: node redis.js
  */
 
