@@ -12,7 +12,7 @@ http.createServer(function(req, res){
 
     //请求百度主页
     request.get('https://www.baidu.com', function (error, response, body) {
-        //返回百度主页内容
+        // 返回百度主页内容
         res.end(body);
     });
 }).listen(3000);
