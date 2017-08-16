@@ -28,6 +28,8 @@
         "lodash": "^4.17.4",
         "underscore": "^1.8.3",
         "request-promise": "^4.1.1",
+        "mongoose": "^4.11.7",
+        "redis": "^2.8.0",
         "nunjucks": "~3.0.0 "
     },
     "devDependencies": {

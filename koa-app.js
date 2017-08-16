@@ -1,3 +1,7 @@
+/**
+ * 简单koa app
+ */
+
 const Koa = require('koa');
 const app = new Koa();
 
