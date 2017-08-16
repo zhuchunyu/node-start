@@ -1,5 +1,5 @@
 /**
- * 简单web服务器
+ * 简单web服务器 (web框架express/koa底层库)
  * 运行: node simple-server.js  或者(自动重启) nodemon simple-server.js
  * 访问：http://localhost:3000
  */
