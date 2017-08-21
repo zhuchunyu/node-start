@@ -15,7 +15,7 @@ app.use(async (ctx, next) => {
     //do something
     
     await new Promise(function (resolve) {
-        redis.set('key1', 'value1', function (err, reply) {
+        client.set('key1', 'value1', function (err, reply) {
             console.log(err);
             console.log(reply);
             
@@ -30,7 +30,7 @@ app.use(async (ctx, next) => {
 app.use(async (ctx, next) => {
     
     const value = await new Promise(function (resolve) {
-        redis.get('key1', function (err, value) {
+        client.get('key1', function (err, value) {
             console.log(err);
             console.log(value);
             
