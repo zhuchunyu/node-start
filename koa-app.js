@@ -6,6 +6,18 @@
 const Koa = require('koa');
 const app = new Koa();
 
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://mongo:27017/start', {useMongoClient:true});
+
+const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+    // we're connected!
+    console.log('connected');
+});
+
 //创建redis客户端
 const redis = require("redis"),
     client = redis.createClient({host:'redis', port:6379});
