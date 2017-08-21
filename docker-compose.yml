@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  web:
+    build: .
+    ports:
+     - "50000:50000"
+    volumes:
+     - .:/webapp
+  redis:
+    image: redis:3.2
+

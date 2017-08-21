@@ -5,7 +5,7 @@
 
 //创建redis客户端
 const redis = require("redis"),
-    client = redis.createClient({host:'192.168.1.125', port:6379});
+    client = redis.createClient({host:'redis', port:6379});
 
 client.on("error", function (err) {
     console.log("Error " + err);
