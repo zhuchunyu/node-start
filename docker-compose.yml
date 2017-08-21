@@ -4,7 +4,7 @@ services:
   web:
     build: .
     ports:
-     - "50000:50000"
+     - "3072:3072"
     volumes:
      - .:/webapp
   redis:

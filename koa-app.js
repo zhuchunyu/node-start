@@ -6,17 +6,41 @@
 const Koa = require('koa');
 const app = new Koa();
 
+//创建redis客户端
+const redis = require("redis"),
+    client = redis.createClient({host:'redis', port:6379});
+
 //中间件
 app.use(async (ctx, next) => {
     //do something
+    
+    await new Promise(function (resolve) {
+        redis.set('key1', 'value1', function (err, reply) {
+            console.log(err);
+            console.log(reply);
+            
+            resolve();
+        });
+    });
+    
     await next();
 });
 
 // response
-app.use(ctx => {
-    ctx.body = 'Hello Koa';
+app.use(async (ctx, next) => {
+    
+    const value = await new Promise(function (resolve) {
+        redis.get('key1', function (err, value) {
+            console.log(err);
+            console.log(value);
+            
+            resolve(value);
+        });
+    });
+    
+    ctx.body = `values is ${value}`;
 });
 
-app.listen(3000);
+app.listen(3072);
 
 console.log('Server Linstening on 3000');

@@ -1,5 +1,4 @@
 #!/usr/bin/bash
 
 npm install
-node redis.js
-
+node koa-server.js
