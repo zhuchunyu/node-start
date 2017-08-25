@@ -17,3 +17,14 @@ nodemon/pm2 应用自动重启
 mocha/jasmine   测试工具
 ```
 
+sudo docker commit -m "centos add node" -a "Docker Newbee" 016c693c595a node-centos:0.1
+sudo docker save -o node-centos:0.1 node-centos.tar
+sudo docker lload --input node-centos.tar
+
+
+rabbitMQ 消息队列(erlang编写)
+celery   任务队列
+spark    数据处理
+storm    实时计算框架
+elasticsearch 搜索
+
